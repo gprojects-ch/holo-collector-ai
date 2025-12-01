@@ -1,0 +1,7 @@
+path: /workspace/holo-collector-ai/yolo/data
+
+train: images/train
+val: images/val
+
+names:
+  0: minifigure
