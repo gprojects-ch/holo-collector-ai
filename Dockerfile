@@ -18,12 +18,6 @@ RUN pip install --no-cache-dir -r requirements.txt \
 # Ultralytics: ohne deps
 RUN pip install --no-cache-dir ultralytics==8.3.1 --no-deps
 
-# Benötigte Ultralytics-Abhängigkeiten
-RUN pip install --no-cache-dir opencv-python-headless==4.9.0.80
-RUN pip install --no-cache-dir psutil
-RUN pip install --no-cache-dir matplotlib==3.7.2
-RUN pip install --no-cache-dir tqdm
-
 # Projekt
 COPY app ./app
 COPY models ./models
