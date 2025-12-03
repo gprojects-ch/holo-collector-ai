@@ -1,9 +1,15 @@
 fastapi==0.111.0
 uvicorn[standard]==0.30.0
 
-# YOLO + Torch CPU
+# YOLO Runtime Dependencies
+torch==2.9.1+cpu
 ultralytics==8.3.1
 
-# Bildverarbeitung
-pillow==10.3.0
+opencv-python-headless==4.9.0.80
 numpy==1.26.4
+pillow==10.3.0
+tqdm
+psutil
+matplotlib==3.7.2
+requests
+pyyaml
