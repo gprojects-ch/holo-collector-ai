@@ -1,0 +1,7 @@
+.venv
+.ven
+__pycache__
+training
+cvat
+yolov8n.pt
+.git

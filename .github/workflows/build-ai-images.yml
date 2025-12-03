@@ -1,0 +1,27 @@
+name: Build AI Docker image
+
+on:
+  # Nur manuell über "Run workflow" im Actions-Tab
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: "Tag für das Docker-Image"
+        required: true
+        default: "local-test"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # Wenn du NUR bauen willst (ohne push), reicht das hier:
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: holo-collector-ai-cpu:${{ github.event.inputs.image_tag }}

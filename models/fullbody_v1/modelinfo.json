@@ -1,0 +1,10 @@
+{
+  "id": "fullbody_v1",
+  "version": "0.0.1",
+  "task": "minifigure-fullbody",
+  "framework": "ultralytics-yolov8",
+  "input_size": 640,
+  "classes": [
+    "Minifigure"
+  ]
+}
